@@ -1,0 +1,15 @@
+# Logs with GPS coordinates
+logs/
+*.csv
+
+# Database files with location history
+*.db
+*.db.bak
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment
+.env
