@@ -1,17 +1,34 @@
+<div align="center">
+
+<img width="100%" alt="TOWER HUNTER" src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,100:1C6879&height=220&section=header&text=TOWER%20HUNTER&fontSize=60&fontColor=ffffff&animation=twinkling&fontAlignY=35&desc=Linux%20%7C%20Python%20%7C%20Cellular%20%7C%20Monitoring&descSize=16&descAlignY=58"/>
+
+`Linux` [`Python`](https://www.python.org/) `Cellular` `Monitoring` - Cell tower logger and anomaly detector for Linux mobile devices. Monitors cellular connections, logs tower data with GPS, and detects suspicious activity.
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=1C6879&center=true&vCenter=true&multiline=true&repeat=true&width=950&height=90&lines=Cell+tower+logger+and+anomaly+detector+for+Linux+mobile+devices%3BLinux+%2F+Python+%2F+Cellular+%2F+Monitoring)](https://git.io/typing-svg)
+
+<br>
+
+[![Project](https://img.shields.io/badge/Project-Tower--Hunter-1C6879?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ringmast4r/Tower-Hunter)
+[![Format](https://img.shields.io/badge/Format-Python-000000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ringmast4r/Tower-Hunter/tree/main)
+
+[![Stars](https://img.shields.io/github/stars/Ringmast4r/Tower-Hunter?style=flat-square&color=1C6879)](https://github.com/Ringmast4r/Tower-Hunter/stargazers)
+[![Forks](https://img.shields.io/github/forks/Ringmast4r/Tower-Hunter?style=flat-square&color=1C6879)](https://github.com/Ringmast4r/Tower-Hunter/network/members)
+[![Repo Size](https://img.shields.io/github/repo-size/Ringmast4r/Tower-Hunter?style=flat-square&color=1C6879)](https://github.com/Ringmast4r/Tower-Hunter)
+[![Last Commit](https://img.shields.io/github/last-commit/Ringmast4r/Tower-Hunter?style=flat-square&color=1C6879)](https://github.com/Ringmast4r/Tower-Hunter/commits/main)
+
+</div>
+
+---
+
 # TowerHunter v3.0 - SimTrack
 
-![GitHub stars](https://img.shields.io/github/stars/Ringmast4r/Tower-Hunter?style=flat-square&color=0066ff)
-![GitHub forks](https://img.shields.io/github/forks/Ringmast4r/Tower-Hunter?style=flat-square&color=0088ff)
-![GitHub watchers](https://img.shields.io/github/watchers/Ringmast4r/Tower-Hunter?style=flat-square&color=00aaff)
-![GitHub repo size](https://img.shields.io/github/repo-size/Ringmast4r/Tower-Hunter?style=flat-square&color=00ccff)
-![GitHub last commit](https://img.shields.io/github/last-commit/Ringmast4r/Tower-Hunter?style=flat-square&color=00eeff)
-![GitHub issues](https://img.shields.io/github/issues/Ringmast4r/Tower-Hunter?style=flat-square&color=0066ff)
 ![License](https://img.shields.io/badge/license-Proprietary-0066ff?style=flat-square)
 ![Profile Views](https://komarev.com/ghpvc/?username=Ringmast4r&color=0066ff&style=flat-square&label=Profile+Views)
 
 A cell tower logger and anomaly detector designed for mobile security research on Linux-based portable devices.
 
-## What This Is
+<a id="what-this-is"></a>
+## `> what_this_is`
 
 TowerHunter is a field tool that continuously monitors and logs cellular network connections in real-time. It captures detailed information about cell towers your device connects to, correlates this with GPS location data, and can detect potentially suspicious cellular activity.
 
@@ -21,14 +38,16 @@ TowerHunter is a field tool that continuously monitors and logs cellular network
 - Mobile network research and education
 - Understanding cellular handoff behavior while traveling
 
-## What This Is NOT
+<a id="what-this-is-not"></a>
+## `> what_this_is_not`
 
 - **Not a hacking tool** - TowerHunter passively monitors your own device's cellular connection
 - **Not cross-platform** - This only runs on Linux with ModemManager and gpsd
 - **Not a consumer app** - Requires specific hardware (cellular modem, GPS) and Linux knowledge
 - **Not for Windows/macOS** - The viewer can display historical data but core functionality requires Linux
 
-## Features
+<a id="features"></a>
+## `> features`
 
 ### Cell Tower Logging
 - Captures MCC, MNC, LAC, TAC, and Cell ID from your cellular modem
@@ -55,13 +74,15 @@ Alerts are generated for potentially suspicious activity:
 - Historical data viewer for analyzing past sessions
 - Export functionality (JSON, CSV)
 
-## Hardware Requirements
+<a id="hardware-requirements"></a>
+## `> hardware_requirements`
 
 - **Linux device** - Tested on ClockworkPi DevTerm running Kali Linux
 - **Cellular modem** - Must be supported by ModemManager (mmcli)
 - **GPS receiver** - Must work with gpsd
 
-## Software Dependencies
+<a id="software-dependencies"></a>
+## `> software_dependencies`
 
 ```bash
 # Required packages
@@ -71,7 +92,8 @@ sudo apt install modemmanager gpsd gpsd-clients python3
 sudo apt install sshpass
 ```
 
-## Files
+<a id="files"></a>
+## `> files`
 
 | File | Description |
 |------|-------------|
@@ -82,7 +104,8 @@ sudo apt install sshpass
 | `start-viewer.sh` | Launch script for viewer |
 | `start-remote.sh` | Launch script for remote mode |
 
-## Usage
+<a id="usage"></a>
+## `> usage`
 
 ### Direct Mode (on device with modem)
 
@@ -118,7 +141,8 @@ python3 viewer.py
 
 Access at `http://localhost:8889`
 
-## Web Interface
+<a id="web-interface"></a>
+## `> web_interface`
 
 ### Live Dashboard (port 8888)
 - Real-time cell tower and GPS data
@@ -133,7 +157,8 @@ Access at `http://localhost:8889`
 - Alert history
 - Data export (JSON/CSV)
 
-## Database Schema
+<a id="database-schema"></a>
+## `> database_schema`
 
 ### `cell_logs` - Individual readings
 - Timestamp, cell identifiers (MCC/MNC/LAC/TAC/Cell ID)
@@ -155,7 +180,8 @@ Access at `http://localhost:8889`
 ### `tower_locations` - OpenCellID cache
 - Cached tower coordinates to reduce API calls
 
-## Configuration
+<a id="configuration"></a>
+## `> configuration`
 
 Edit the `CONFIG` dictionary in the Python files:
 
@@ -170,7 +196,8 @@ CONFIG = {
 }
 ```
 
-## API Endpoints
+<a id="api-endpoints"></a>
+## `> api_endpoints`
 
 | Endpoint | Description |
 |----------|-------------|
@@ -184,7 +211,8 @@ CONFIG = {
 | `GET /api/export/json` | Export as JSON |
 | `GET /api/export/csv` | Export as CSV |
 
-## Understanding the Data
+<a id="understanding-the-data"></a>
+## `> understanding_the_data`
 
 ### Cell Identifiers
 - **MCC** (Mobile Country Code) - Country identifier (310-316 = USA)
@@ -207,7 +235,8 @@ Rapid tower switching or unusually strong signals *could* indicate an IMSI catch
 
 **Always investigate alerts in context before drawing conclusions.**
 
-## Limitations
+<a id="limitations"></a>
+## `> limitations`
 
 - Requires root/sudo for modemmanager access
 - OpenCellID API has rate limits (uses free public key)
@@ -215,7 +244,8 @@ Rapid tower switching or unusually strong signals *could* indicate an IMSI catch
 - Tower location accuracy varies (OpenCellID is crowdsourced)
 - Only detects anomalies based on simple heuristics
 
-## License
+<a id="license"></a>
+## `> license`
 
 **Copyright (c) 2025 Ringmast4r. All Rights Reserved.**
 
@@ -228,7 +258,8 @@ This software is proprietary and confidential. Unauthorized copying, distributio
 
 For licensing inquiries, contact the repository owner.
 
-## Acknowledgments
+<a id="acknowledgments"></a>
+## `> acknowledgments`
 
 - [OpenCellID](https://opencellid.org/) for cell tower location data
 - [ModemManager](https://www.freedesktop.org/wiki/Software/ModemManager/) for modem abstraction
@@ -237,3 +268,11 @@ For licensing inquiries, contact the repository owner.
 ---
 
 *This project is the result of independent security research. All code is original work by Ringmast4r.*
+
+---
+
+<div align="center">
+
+<img width="100%" alt="TOWER HUNTER footer" src="https://capsule-render.vercel.app/api?type=waving&color=0:1C6879,100:000000&height=120&section=footer&text=RINGMAST4R%20%2F%2F%20MONITORING&fontSize=18&fontColor=ffffff&fontAlignY=65"/>
+
+</div>
